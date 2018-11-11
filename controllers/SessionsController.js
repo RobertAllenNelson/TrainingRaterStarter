@@ -52,7 +52,7 @@ const update = async function (req, res) {
     return res.json({ success: false, error: err });
   }
 
-  return res;
+  return res.json(session);
 }
 module.exports.update = update;
 
