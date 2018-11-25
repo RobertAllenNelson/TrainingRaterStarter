@@ -1,11 +1,12 @@
 <div class="container">
+  <button class="btn btn-primary" (click)="goToAdd()">Add User</button>
   <div class="row">
-    <div class="col-md-4"><strong>Users</strong></div>
+    <div class="col-md-4"><strong>User</strong></div>
     <div class="col-md-4"><strong>Role</strong></div>
   </div>
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let user of users">
-      <div class="row">
+      <div class="row" [style.cursor]="'pointer'" (click)="goToEdit(user.id)">
         <div class="col-md-4">{{ user.user }}</div>
         <div class="col-md-4 list-group-item list-group-item-info">{{ user.role }}</div>
       </div>

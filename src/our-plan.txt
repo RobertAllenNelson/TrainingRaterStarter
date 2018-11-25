@@ -1,0 +1,13 @@
+
+Session detail page
+- (DONE) display a session from the db 
+- (DONE) update that session on save (update)
+-- (DONE) service update call
+- (DONE) save a new session (create)
+-- (DONE) service create call
+- (DONE) route for this page
+-- (DONE) the route should tell me when session I'm working with
+- (DONE) trigger this route from the session list page
+-- (DONE) add new button will route to the detail page with 
+--- (DONE) some kinda blank or new indicator
+-- (DONE) click on the row to edit it
