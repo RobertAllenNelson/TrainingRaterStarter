@@ -1,13 +1,11 @@
 
-Session detail page
-- (DONE) display a session from the db 
-- (DONE) update that session on save (update)
--- (DONE) service update call
-- (DONE) save a new session (create)
--- (DONE) service create call
-- (DONE) route for this page
--- (DONE) the route should tell me when session I'm working with
-- (DONE) trigger this route from the session list page
--- (DONE) add new button will route to the detail page with 
---- (DONE) some kinda blank or new indicator
--- (DONE) click on the row to edit it
+SessionRating Component
+- DONE display the avg rating
+- DONE rate the session
+-- rate as many times as I want with the  same user???
+- DONE service to work with ratings (mock data for now)
+- DONE this component should work for detail page and list page
+- DONE no routing for this, implemented via selector
+- DONE select dropdown (1, 2, etc)
+- DONE v1 not fancy, just working
+-- Rating can be any number??

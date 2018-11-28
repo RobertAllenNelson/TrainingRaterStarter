@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-// TODO CCC: why do I have to do this for map to come in?
 // tslint:disable-next-line:import-blacklist
-import { Observable } from 'rxjs/observable';
-// import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
 
 export interface ISession {
   id: number;
@@ -23,14 +21,6 @@ export class SessionsService {
 
   getSessions(): Observable<ISession[]> {
     return this.http.get<ISession[]>('http://localhost:3000/sessions');
-     // .map((sessions) => {
-      //   sessions.forEach((session) => {
-      //     const startTime = new Date(session.startTime);
-      //     startTime.setHours(startTime.getHours() - (startTime.getTimezoneOffset() / 60));
-      //     session.startTime = startTime.toISOString();
-      //   });
-      //   return sessions;
-      // });
   }
 
   getSessionById(id: number): Observable<ISession> {
@@ -44,4 +34,5 @@ export class SessionsService {
       return this.http.post<ISession>(`http://localhost:3000/sessions`, session);
     }
   }
+
 }
