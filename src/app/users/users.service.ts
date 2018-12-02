@@ -4,8 +4,13 @@ import { Observable } from 'rxjs/Observable';
 
 export interface IUser {
   id: number;
-  user: string;
-  role: string;
+  first: string;
+  last: string;
+  email: string;
+  phone: string;
+  isTrainer: boolean;
+  aboutMe: string;
+  password: string;
   createdAt: string;
   updatedAt: string;
 }

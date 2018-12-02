@@ -29,8 +29,13 @@ export class UsersDetailComponent implements OnInit {
             // new
             this.user = {
                 id: 0,
-                user: '',
-                role: '',
+                first: '',
+                last: '',
+                email: '',
+                phone: '',
+                isTrainer: false,
+                aboutMe: '',
+                password: '',
                 createdAt: '',
                 updatedAt: '',
             };
@@ -58,7 +63,10 @@ export class UsersDetailComponent implements OnInit {
     }
 
     private formValid(): boolean {
-        return this.user.user && this.user.role ? true : false;
+        return this.user.first && this.user.last 
+        && this.user.email
+        && this.user.password
+         ? true : false;
     }
 
     cancel(): void {
