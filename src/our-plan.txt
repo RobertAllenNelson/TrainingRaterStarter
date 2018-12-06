@@ -1,11 +1,14 @@
 
-SessionRating Component
-- DONE display the avg rating
-- DONE rate the session
--- rate as many times as I want with the  same user???
-- DONE service to work with ratings (mock data for now)
-- DONE this component should work for detail page and list page
-- DONE no routing for this, implemented via selector
-- DONE select dropdown (1, 2, etc)
-- DONE v1 not fancy, just working
--- Rating can be any number??
+BE Security
+- secure API endpoints
+
+FE Security
+- Auth Service
+-- responsible for determinig isAuthenticated
+-- login endpoint
+- secure pages or routes
+-- want this to be easy to implement everywhere
+- when hitting endpoints from FE how to include security token
+
+Stretch Goals
+- make password great again

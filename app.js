@@ -68,5 +68,3 @@ app.put('/sessions', passport.authenticate('jwt', { session: false }), sessions.
 app.post('/users', userController.create);
 app.post('/login', userController.login);
 module.exports = app;
-
-

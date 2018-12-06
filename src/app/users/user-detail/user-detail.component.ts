@@ -42,13 +42,6 @@ export class UsersDetailComponent implements OnInit {
         }
     }
 
-    // not needed here
-    getLocalDateTime(): string {
-        const startTime = new Date();
-        startTime.setHours(startTime.getHours() - (startTime.getTimezoneOffset() / 60));
-        return startTime.toISOString().slice(0, 16);
-    }
-
     save(): void {
         if (!this.formValid()) {
             // TODO CCC: pop message about not valid
