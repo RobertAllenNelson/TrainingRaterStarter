@@ -72,6 +72,9 @@ app.get('/users/:userId', passport.authenticate('jwt', { session: false }), user
 app.post('/users', passport.authenticate('jwt', { session: false }), userController.create);
 app.put('/users', passport.authenticate('jwt', { session: false }), userController.update);
 
+app.post('/ratings', passport.authenticate('jwt', { session: false }), ratings.create);
+app.put('/ratings', passport.authenticate('jwt', { session: false }), ratings.update);
+
 // app.post('/users', userController.create);
 app.post('/login', userController.login);
 
