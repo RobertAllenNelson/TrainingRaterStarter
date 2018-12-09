@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IUser, UsersService } from '../users.service';
+import { ToastsManager } from 'ng2-toastr';
 
 @Component({
     templateUrl: './user-detail.component.html',
@@ -13,6 +14,7 @@ export class UsersDetailComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private usersService: UsersService,
+        private toastsManager: ToastsManager,
     ) { }
 
     ngOnInit() {
@@ -44,13 +46,12 @@ export class UsersDetailComponent implements OnInit {
 
     save(): void {
         if (!this.formValid()) {
-            // TODO CCC: pop message about not valid
-            console.log('form invalid');
+            this.toastsManager.error('Form invalid');
             return;
         }
         this.usersService.save(this.user)
             .subscribe((user) => {
-                // TODO CCC: add a success message
+                this.toastsManager.success('User saved');
                 this.router.navigate(['users']);
             });
     }

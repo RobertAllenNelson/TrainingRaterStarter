@@ -5,5 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     startTime: { type: DataTypes.DATE, allowNull: false },
     location: DataTypes.STRING
   }, {});
+  Sessions.associate = function (models) {
+    models.Sessions.hasMany(models.Ratings, { foreignKey: 'sessionId', sourceKey: 'id' });
+  }
   return Sessions;
 };
